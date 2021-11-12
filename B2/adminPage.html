@@ -1,0 +1,317 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="Stylesheet" href="adminPage.css">
+</head>
+<body onload="fulfillDataForUserTable()">
+    <div class="container" id="meo">
+        <div class="header">
+            <img
+                class= "img1" 
+                src = "assets/logo.png"
+            >
+
+            <div class="header--right-part">
+                <div class = "header--right-part-name">Mick van Brenkeluen</div>
+                <div><img class = "img2" src = "assets/avatar.png"></div>
+                <div><img class = "img3" src = "assets/avatarBtn.png"></div>
+            </div>
+        </div>
+
+        <div class="side-bar-and-main-content" id="sidebarContent">      
+            <div class="side-bar" id ="side-bar" onmouseover="mouseMenu()" onmouseout="outMenu()">
+                <div class="side-bar-content">
+                    <div class="side-bar-menu">
+                        <div class="side-bar-menu-header">Menu</div>
+                        <div class="side-bar-menu-but" id="menuBtn" onclick="toggleMenu()">
+                            <i class="fas fa-chevron-left fa-xs"></i>
+                        </div>
+                    </div>
+                    <div class="side-bar-menu-sub" onclick="subMenu(this)">
+
+                    <div class="side-bar-menu--pagelink">
+                        <div class="side-bar-menu--link__icon"><i class="fas fa-columns"></i></div>
+                        <div class="side-bar-menu--link__text">Admin Dashboard</div>
+                    </div>
+                    </div>
+
+                    <div class="side-bar-menu-sub" onclick="subMenu(this)">
+                        <div class="side-bar-menu--page">
+                            <div class="side-bar-menu--pagelink">
+                                <div class="side-bar-menu--link__icon"><i class="fas fa-columns"></i></div>
+                                <div class="side-bar-menu--link__text">Venue Setting </div>
+                            </div>  
+                            <div class= "side-bar-menu--list">
+                                <i class="fas fa-chevron-up fa-xs"></i>
+                            </div>      
+                        </div>
+                        
+                        <div class="side-bar-menu--link">
+                            <div class="side-bar-menu--link__icon no"><i class="fas fa-columns"></i></div>
+                            <div class="side-bar-menu--link__text child">Purposes</div>
+                        </div>
+                        <div class="side-bar-menu--link">
+                            <div class="side-bar-menu--link__icon no"><i class="fas fa-columns"></i></div>
+                            <div class="side-bar-menu--link__text child">Activities</div>
+                        </div>
+                        <div class="side-bar-menu--link">
+                            <div class="side-bar-menu--link__icon no"><i class="fas fa-columns"></i></div>
+                            <div class="side-bar-menu--link__text child">Places</div>
+                        </div>
+                        <div class="side-bar-menu--link">
+                            <div class="side-bar-menu--link__icon no"><i class="fas fa-columns"></i></div>
+                            <div class="side-bar-menu--link__text child">Venues properties</div>
+                        </div>
+                        <div class="side-bar-menu--link">
+                            <div class="side-bar-menu--link__icon no"><i class="fas fa-columns"></i></div>
+                            <div class="side-bar-menu--link__text child">Tornueve</div>
+                        </div> 
+                        <div class="side-bar-menu--link">
+                            <div class="side-bar-menu--link__icon no"><i class="fas fa-columns"></i></div>
+                            <div class="side-bar-menu--link__text child">Events templates</div>
+                        </div>
+                        <div class="side-bar-menu--link">
+                            <div class="side-bar-menu--link__icon no"><i class="fas fa-columns"></i></div>
+                            <div class="side-bar-menu--link__text child">Image repository</div>
+                        </div>
+                    </div>
+                    
+                    <div class="side-bar-menu-sub" onclick="subMenu(this)">
+                        <div class="side-bar-menu--page">
+                            <div class="side-bar-menu--pagelink">
+                                <div class="side-bar-menu--link__icon"><i class="fas fa-columns"></i></div>
+                                <div class="side-bar-menu--link__text">Venue Setting </div>
+                            </div>  
+                            <div class= "side-bar-menu--list">
+                                <i class="fas fa-chevron-up fa-xs"></i>
+                            </div>      
+                        </div>
+
+                        <div class="side-bar-menu--link">
+                            <div class="side-bar-menu--link__icon no"><i class="fas fa-columns"></i></div>
+                            <div class="side-bar-menu--link__text child">Auto emails</div>
+                        </div>
+                        <div class="side-bar-menu--link">
+                            <div class="side-bar-menu--link__icon no"><i class="fas fa-columns"></i></div>
+                            <div class="side-bar-menu--link__text child">Auto messages</div>
+                        </div>
+                        <div class="side-bar-menu--link">
+                            <div class="side-bar-menu--link__icon no"><i class="fas fa-columns"></i></div>
+                            <div class="side-bar-menu--link__text child">Auto tasks</div>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-menu-sub" onclick="subMenu(this)">
+
+                        <div class="side-bar-menu--page">
+                            <div class="side-bar-menu--pagelink">
+                                <div class="side-bar-menu--link__icon"><i class="fas fa-columns"></i></div>
+                                <div class="side-bar-menu--link__text">Administration</div>
+                            </div>  
+                            <div class= "side-bar-menu--list" onclick="subMenu()">
+                                <i class="fas fa-chevron-up fa-xs"></i>
+                            </div>      
+                        </div>
+
+                        <div class="side-bar-menu--link">
+                            <div class="side-bar-menu--link__icon no"><i class="fas fa-columns"></i></div>
+                            <div class="side-bar-menu--link__text child">Venue requests</div>
+                        </div>
+                        <div class="side-bar-menu--link">
+                            <div class="side-bar-menu--link__icon no"><i class="fas fa-columns"></i></div>
+                            <div class="side-bar-menu--link__text child">Commisions</div>
+                        </div>
+                        <div class="side-bar-menu--link">
+                            <div class="side-bar-menu--link__icon no"><i class="fas fa-columns"></i></div>
+                            <div class="side-bar-menu--link__text child">Twinfield</div>
+                        </div>
+                    </div>
+
+                    <div class="side-bar-menu-sub" onclick="subMenu(this)">
+                        <div class="side-bar-menu--page">
+                            <div class="side-bar-menu--pagelink">
+                                <div class="side-bar-menu--link__icon"><i class="fas fa-columns"></i></div>
+                                <div class="side-bar-menu--link__text">Advertisement</div>
+                            </div>  
+                            <div class= "side-bar-menu--list">
+                                <i class="fas fa-chevron-up fa-xs"></i>
+                            </div>      
+                        </div>
+
+                        <div class="side-bar-menu--link">
+                            <div class="side-bar-menu--link__icon no"><i class="fas fa-columns"></i></div>
+                            <div class="side-bar-menu--link__text child">Homepage photo's</div>
+                        </div>
+                        <div class="side-bar-menu--link">
+                            <div class="side-bar-menu--link__icon no"><i class="fas fa-columns"></i></div>
+                            <div class="side-bar-menu--link__text child">Featured venue's</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hrr"> </div>
+            </div>
+
+            <div class="empty-content" id="empty-content"></div>
+            
+            <div class="main-content">
+                <div class="main-content--main">
+                    <div class="main-content--main-header">Header</div>
+
+                    <div class="main-content--main-text">Text</div>
+
+                    <div class="main-content--main-buts">
+                        <div class="main-content--main-buts__switch">
+                            <div>Hide resolved request</div>
+            
+                            <label class="switch">
+                                <input type="checkbox" id="switch-button" checked onchange="filterTable()">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+                        <div class="main-content--main-buts__add" onclick="infoDialog()">
+                            <div class="add-border">
+                                <i class="fas fa-plus fa-sm"></i>
+                            </div>
+                            
+                            <div class="add-text">Add new</div>
+                        </div>
+
+                        <dialog id="dialog">
+                            <form method="dialog">
+                                <th class="col-3">Name
+                                    <input type="text" id="addName">
+                                </th>
+                                <th class="col-3">Other information
+                                    <input type="text" id="addOtherInformation">
+                                </th>
+                                <th class="col-2">Start date
+                                    <input type="text" id="addStartDate">
+                                </th>
+                                <th class="col-2">End date
+                                    <input type="text" id="addEndDate">
+                                </th>
+                                <menu>
+                                    <button id="confirmBtn" onclick="submitDialog()">Add</button>
+                                    <button id="editBtn" style="display:none" onclick="submitDialog()" >Edit</button>
+                                    <button id="deleteBtn" style="display:none" onclick="submitDelete()" >Delete</button>
+                                    <button value="cancel">Cancel</button>
+                                </menu>
+                            </form>
+                        </dialog>
+                    </div>
+
+                    <div class="main-content--main-table1">
+                        <table class="row" id="myTable">
+                            <tr class="main-table--header">
+                                <th class="col-3">Name
+                                    <input type="text" oninput="filterTable()" id="nameFiltered">
+                                </th>
+                                <th class="col-3">Other information
+                                    <input type="text" oninput="filterTable()" id="otherInformationFiltered">
+                                </th>
+                                <th class="col-2">Start date
+                                    <input type="text" oninput="filterTable()" id="startDateFiltered">
+                                </th>
+                                <th class="col-2">End date
+                                    <input type="text" oninput="filterTable()" id="endDateFiltered">
+                                </th>
+                                <th class="col-1"></th>
+                                <th class="col-1"></th>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="main-content--main-tableF">
+                        <table>
+                            <tr class="main-table--header">
+                                <th class="col-4">Name</th>
+                                <th class="col-3">Start date</th>
+                                <th class="col-3">End date</th>
+                                <th class="col-2"></th>
+                            </tr>
+
+                            <tr>
+                                <td>Name</td>
+                                <td>Date or empty</td>
+                                <td>Date or empty</td>
+                                <td class="tableIcon"><i class="fas fa-pen"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td>Name</td>
+                                <td>Date or empty</td>
+                                <td>Date or empty</td>
+                                <td class="tableIcon"><i class="fas fa-pen"></i></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="main-content--foot">
+                    <div class="main-content--footer">
+                        <div class="main-content--footer__column">
+                            <div class="column-title">
+                                Management
+                            </div>
+
+                            <div class="column-content">
+                                Home Page<br>Search page<br>Even list<br>Calendar
+                            </div>
+                        </div>
+    
+                        <div class="main-content--footer__column">
+                            <div class="column-title">
+                                Management
+                            </div>
+
+                            <div class="column-content">
+                                Home Page<br>Search page<br>Even list<br>Calendar
+                            </div>
+                        </div>
+    
+                        <div class="main-content--footer__column">
+                            <div class="column-title">
+                                Management
+                            </div>
+
+                            <div class="column-content">
+                                Home Page<br>Search page<br>Even list<br>Calendar<br>Help desk
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main-content--footInfo">
+
+                        <div>@2019 Coopax</div>
+
+                        <div class="main-content--footInfo__right">
+                                <div>Excl. vat</div>
+                                <div class="right-switch">
+                                    <div class="right-switch--but"></div>
+                                </div>
+                                <div class="right-incl">Incl. vat</div>
+                                <div>
+                                    <img class = "img4" src = "assets/country.png">
+                                </div>
+                                <div class="right-lang">English</div>
+                                <div class="right-arrow"><i class="fas fa-caret-down"></i></div>
+                        </div>
+
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <script src="adminPage.js"></script>
+</body>
+</html>
+	

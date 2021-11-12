@@ -12,20 +12,64 @@
  
 </head>
 <body>
-        <img id = "ground" src = "1.png">
-        <div id = "title">The most beautiful venue
-        for your event at your fingertips</div>
-        <div id = "logo">
-            <img id = "coopax" src = "group 11.png">
+    <div class="container">  
+
+        <div class="left">
+
+            <img class="background-img" src = "1.png">
+            <div class="background-img--title">The most beautiful venue
+            for your event at your fingertips</div>
+            <div class="background-img--logo">
+                <img src = "group 11.png">
+            </div>
+
+        </div> 
+
+        <div class="right">
+            <div class="right-login">
+
+                <div class="right-login--header">Log in</div>
+                <div class="right-login--text">Please enter your usename and password</div>
+                    
+                    <input id="username" type="text" class="right-login--input" placeholder="Username*" value=""/>
+                    <input id="password" type="password" class="right-login--input" placeholder="Password*" value=""/>
+                    <div class = "right-login--footer">
+                        <div class="right-login--footer-left"><a href="#">Forget your usename? Forget your password?</a></div>
+                        <div class="right-login--footer-right">
+                            <button type ="submit" onclick="isValid()">Log in</button>
+                        </div>
+                    </div>
+
+            </div>
+
+            <div class="right-register">
+                Don't have an account? <span><a href="#">Register</a></span>
+            </div>
         </div>
-        <div id = "login">
-            <div class = "headerF">Log in</div>
-            <div class = "bodyF">Please enter your usename</div>
-            <input class = "input" style = "top:389px;" placeholder="Username*">
-            <input class = "input" style = "top:472px;" placeholder="Password*">
-            <div class = "footerF">Forget your usename? Forget your password?</div>
-            <button class = "but">Log In</button>
-        </div>
-    
+    </div>
+
+
+    <script>
+        function isValid() {
+            var user = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+            var data = [
+                { 
+                    username: 'user1',
+                    password: 'pass1'
+                }, { 
+                    username: 'user1',
+                    password: 'pass2'
+                }]
+            var found = data.some(element => element.username == user && element.password == pass);
+            if (found == false) {
+                alert("INCORRECT!")
+            } else {
+                alert("OK")
+            }
+        }
+    </script>
+
 </body>
 </html>
+
