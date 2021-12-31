@@ -1,5 +1,3 @@
-var sidebar = document.getElementById("side-bar")
-
 function subMenu(x) {
     let subMenu = x.getElementsByClassName("side-bar-menu--link");
     let iconsubMenu = x.getElementsByClassName("side-bar-menu--list");
@@ -10,6 +8,8 @@ function subMenu(x) {
         iconsubMenu[i].classList.toggle("icon-sub-menu");
     }
 }
+
+var sidebar = document.getElementById("side-bar")
 
 function mouseMenu() {
     if (sidebar.classList.contains("new-width") == true) {     
